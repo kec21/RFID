@@ -1,12 +1,3 @@
-/*
- * 
- * All the resources for this project: https://randomnerdtutorials.com/
- * Modified by Rui Santos
- * 
- * Created by FILIPEFLOP
- * 
- */
- 
 #include <SPI.h>
 #include <MFRC522.h>
  
@@ -49,9 +40,9 @@ void loop()
   Serial.println();
   Serial.print("Message : ");
   content.toUpperCase();
-  if (content.substring(1) == "A1 5B EE 1D" and "74 67 0E 04") //change here the UID of the card/cards that you want to give access
+  if (content.substring(1) == "91 D4 35 1D", "A1 21 13 1D") //change here the UID of the card/cards that you want to give access
   {
-    Serial.println("Access granted");
+    Serial.println("Authorized access");
     Serial.println();
     delay(3000);
   }

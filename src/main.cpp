@@ -28,6 +28,7 @@ void loop()
   }
   // Show UID on serial monitor
   Serial.print("UID tag :");
+  delay (1000);
   String content = "";
   byte letter;
   for (byte i = 0; i < mfrc522.uid.size; i++)
@@ -44,7 +45,7 @@ void loop()
   {
     successfullyReadtheFirstCard = true;
   }
-    if (content.substring(1) == "48 23 D8 10")
+    if (content.substring(1) == "74 67 0E 04")
   {
     successfullyReadtheFirstCard = true;
     Serial.println("Correct Order!");
